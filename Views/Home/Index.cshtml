@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<br />
+
+@model List<Produto> // Defina o modelo da view
+
+<h2>Lista de Produtos</h2>
+<ul>
+    @foreach(var produto in Model)
+    {
+        <li>@produto.Nome - Preco:@produto.Preco</li>
+    }
+</ul>
+
